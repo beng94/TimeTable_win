@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1424469172 source:c:\users\bence_000\desktop\hoomework\main.c
+	"IO.h"
+
+1424469068 source:c:\users\bence_000\desktop\hoomework\io.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+
+1424469597 c:\users\bence_000\desktop\hoomework\io.h
+
