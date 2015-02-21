@@ -1,14 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <windows.h>
-#include "IO.h"
+#include "io.h"
+#include "data.h"
 
-void read_in (const char* file_name)
+static FILE* init_io (const char* file_name)
 {
     SetConsoleCP(1250);
     SetConsoleOutputCP(1250);
-    FILE *f = fopen(file_name, "r");
+
+    FILE* f = fopen(file_name, "r");
 
     if(!f)
     {
@@ -16,17 +16,36 @@ void read_in (const char* file_name)
         exit(EXIT_FAILURE);
     }
 
-    char line[500];
+    return f;
+}
 
-    while((fgets(line, sizeof(line), f)) != EOF)
+//TODO: It's unsafe
+//TODO: reads only 3 characters
+int read_line (FILE* f,  char** line)
+{
+    printf("%d", sizeof(line));
+    return fgets(line, sizeof(line), f);
+}
+
+void parse_line ()
+{
+//TODO: strtok
+}
+
+void read_in (const char* file_name)
+{
+    FILE *f;
+
+    f = init_io(file_name);
+
+    char line[500];
+    printf("%d", sizeof(line));
+
+    while(read_line(f, &line)!= EOF)
     {
             printf("%s", line);
             getchar();
     }
-
-    char *new_line;
-    new_line = strtok(line, ";");
-
 
     fclose(f);
 }
