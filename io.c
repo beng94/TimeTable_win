@@ -20,16 +20,28 @@ static FILE* init_io (const char* file_name)
 }
 
 //TODO: It's unsafe
-//TODO: reads only 3 characters
-int read_line (FILE* f,  char** line)
+static int read_line (FILE* f,  char* line, size_t size)
 {
-    printf("%d", sizeof(line));
-    return fgets(line, sizeof(line), f);
+    fgets(line, size, f);
+    return 1;
+
+    //return (fgets(line, sizeof(line), f) != EOF);
 }
 
-void parse_line ()
+static void parse_line (char* line)
 {
-//TODO: strtok
+    //TODO: strtok
+    data* data;
+    init_data(&data);
+
+    char* token = strtok(line, ";");
+    add_data(data, token, 0);
+
+    while(token != NULL)
+    {
+        printf("%s\n", token);
+        token = strtok(NULL, ";");
+    }
 }
 
 void read_in (const char* file_name)
@@ -38,12 +50,10 @@ void read_in (const char* file_name)
 
     f = init_io(file_name);
 
-    char line[500];
-    printf("%d", sizeof(line));
-
-    while(read_line(f, &line)!= EOF)
+    char line [500];
+    while(read_line(f, line, sizeof(line)))
     {
-            printf("%s", line);
+            parse_line(line);
             getchar();
     }
 

@@ -2,7 +2,8 @@ typedef enum curse_type
 {
     lecture,
     practice,
-    lab
+    lab,
+    curse_not_set
 } curse_type;
 
 typedef enum days
@@ -11,7 +12,8 @@ typedef enum days
     tues,
     wed,
     thu,
-    fri
+    fri,
+    days_not_set
 } days;
 
 typedef struct time_interval
@@ -25,14 +27,15 @@ typedef struct time_interval
 typedef struct time
 {
     days day;
-    time_interval time_interval;
+    time_interval* time_interval;
 } time;
 
 typedef enum language
 {
     hun,
     eng,
-    ger
+    ger,
+    language_not_set
 } language;
 
 typedef struct data
@@ -42,8 +45,10 @@ typedef struct data
     int credit;
     char* curse_code;
     curse_type curse_type;
-    time time;
+    time* time;
     char* room;
     char* lecturer;
     language lang;
 } data;
+
+void init_data (data** data);
