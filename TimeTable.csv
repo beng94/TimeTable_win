@@ -1,5 +1,5 @@
 Tárgy kódja;Tárgy neve;Kredit;Felvételek száma;Várólista;Kurzus kódja;Kurzus típusa;Fõ/Várólista/Limit;;;Órarend inf.;Oktatók;Nyelv;Telephely;Megj.;Leírás;;;;;;;;;;;
-BMEVIIIAA00;A programozás alapjai 2;7;1;;AE;Elmélet;12/0/20;;;"SZE:08:15-10:00  (IL407);";Dóbé Péter, Kápolnai Richárd Péter, Dr. Goldschmidt Balázs;angol;;;;;;;;;594405436;;;;;
+BMEVIIIAA00;A programozás alapjai 2;7;1;;AE;Elmélet;12/0/20;;;SZE:08:15-10:00  (IL407);Dóbé Péter, Kápolnai Richárd Péter, Dr. Goldschmidt Balázs;angol;;;;;;;;;594405436;;;;;
 BMEVIIIAA00;A programozás alapjai 2;7;1;;AL;Labor;12/0/20;;;"P:10:15-12:00  (IL407);";Dóbé Péter, Kápolnai Richárd Péter, Dr. Goldschmidt Balázs;angol;;;;;;;;;;;;;;
 BMEVIIIAA00;A programozás alapjai 2;7;1;;NE;Elmélet;19/0/20;;;"H:12:15-14:00  (V1501);";Dr. Kollár Zsolt, Dr. Horváth Péter, Dr. Nagy Lajos;német;;;;;;;;;594409657;;;;;
 BMEVIIIAA00;A programozás alapjai 2;7;1;;NG;Gyakorlat;19/0/20;;;"P:12:15-14:00  (R507);";Dr. Kollár Zsolt, Dr. Horváth Péter, Dr. Nagy Lajos;német;;;;;;;;;594411622;;;;;
@@ -196,4 +196,4 @@ BMEVIDHTF02;Tanköri foglalkozás 2.;0;1;;V11;Gyakorlat;19/0/35;;;"SZE:10:15-12:00
 BMEVIDHTF02;Tanköri foglalkozás 2.;0;1;;V12;Gyakorlat;18/0/35;;;"SZE:10:15-12:00  (E404);";Németh Márton, Németh Krisztián;magyar;;;;;;;;;;;;;;
 BMEVIDHTF02;Tanköri foglalkozás 2.;0;1;;VNÉMET;Gyakorlat;28/0/35;;;"CS:16:15-18:00  (E403);";Dr. Számel László, Németh Krisztián;magyar;;;;;;;;;;;;;;
 BMEVIHIAV10;Algoritmusok és adatszerkezetek hatékony implementálása C nyelven;2;1;;G;Gyakorlat;30/0/30;;;"SZE:12:15-14:00  (IB138);";Dr. Zsóka Zoltán, Vitéz András;magyar;;Szabadon v...;;;;;;;;;;;;573602879
-BMEVITMAK48;Érzelmek logikája;2;1;;04;Elmélet;411/0/500;;;"CS:17:15-19:00  (IB028);";Dr. Sallai Gyula Antal;magyar;;Az órákat ...;;;;;;;;;;;;573399292
+BMEVITMAK48;Érzelmek logikája;2;1;;4;Elmélet;411/0/500;;;"CS:17:15-19:00  (IB028);";Dr. Sallai Gyula Antal;magyar;;Az órákat ...;;;;;;;;;;;;573399292

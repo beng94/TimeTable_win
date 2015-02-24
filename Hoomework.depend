@@ -1,19 +1,21 @@
 # depslib dependency file v1.0
-1424469172 source:c:\users\bence_000\desktop\hoomework\main.c
+1424777238 source:c:\users\bence_000\desktop\hoomework\main.c
 	"IO.h"
 
-1424702867 source:c:\users\bence_000\desktop\hoomework\io.c
+1424780056 source:c:\users\bence_000\desktop\hoomework\io.c
 	<string.h>
 	<windows.h>
 	"io.h"
 	"data.h"
 
-1424701618 c:\users\bence_000\desktop\hoomework\io.h
+1424770544 c:\users\bence_000\desktop\hoomework\io.h
 	<stdio.h>
 
-1424700951 source:c:\users\bence_000\desktop\hoomework\data.c
+1424780815 source:c:\users\bence_000\desktop\hoomework\data.c
 	<stdlib.h>
+	<string.h>
+	<stdio.h>
 	"data.h"
 
-1424712864 c:\users\bence_000\desktop\hoomework\data.h
+1424771835 c:\users\bence_000\desktop\hoomework\data.h
 

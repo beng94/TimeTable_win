@@ -38,6 +38,16 @@ typedef enum language
     language_not_set
 } language;
 
+typedef struct occassion
+{
+    time* time;
+    char* room;
+    struct occassion* next;
+
+} occassion;
+
+
+//TODO: lec_name -> curse_name
 typedef struct data
 {
     char* lec_code;
@@ -45,10 +55,11 @@ typedef struct data
     int credit;
     char* curse_code;
     curse_type curse_type;
-    time* time;
-    char* room;
+    occassion* occas;
     char* lecturer;
     language lang;
+    struct data* next;
 } data;
 
 void init_data (data** data);
+void add_data (data* data, char* str, int arg_num);

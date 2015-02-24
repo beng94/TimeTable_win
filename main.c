@@ -1,6 +1,5 @@
 #include "IO.h"
-
-const char *file_name = "TimeTableUTF8.csv";
+const char *file_name = "TimeTable.csv";
 
 int main()
 {
