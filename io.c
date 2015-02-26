@@ -43,44 +43,46 @@ static FILE* init_io (const char* file_name)
 }
 
 //TODO: It's unsafe
-//always returns 1!!
-static int read_line (FILE* f,  char* line, size_t size)
+static char* read_line (FILE* f,  char* line, size_t size)
 {
-    fgets(line, size, f);
-    return 1;
+    return (char*) fgets(line, size, f);
 }
 
 static void print(data* data)
 {
-    printf("%s\n%s\n%d\n%s\n%s\n%d",
-           data->lec_code,
-           data->lec_name,
-           data->credit,
-           data->curse_code,
-           data->lecturer,
-           data->lang
-           );
-    printf("----------------------------");
+    printf("%s\n", data->lec_code);
+    printf("%s\n", data->lec_name);
+    printf("%d\n", data->credit);
+    printf("%s\n", data->curse_code);
+    printf("%d\n", data->curse_type);
+    printf("%d\n", data->occas->time->day);
+    printf("%d\n", data->occas->time->time_interval->beg_hour);
+    printf("%d\n", data->occas->time->time_interval->beg_min);
+    printf("%d\n", data->occas->time->time_interval->end_hour);
+    printf("%d\n", data->occas->time->time_interval->end_min);
+    printf("%s\n", data->occas->room);
+    printf("%s\n", data->lecturer);
+    printf("%d\n", data->lang);
+
 }
 
 static void parse_line (char* line)
 {
-    //TODO: strtok
+    int count = 0;
+    char** tokens = get_tokens(line, ";", &count);
+
+    int i;
+    for(i = 0; i < count; i++)
+    {
+        printf("%s\n", tokens[i]);
+    }
+
     data* data;
     init_data(&data);
+    add_data(data, tokens);
 
-    char* token = strtok(line, ";");
-    add_data(data, token, 0);
-
-    int i = 1;
-    while(token != NULL)
-    {
-        printf("%s\n", token);
-        token = strtok(NULL, ";");
-        add_data(data, token, i);
-        i++;
-    }
     print(data);
+    //getchar();
 }
 
 void read_in (const char* file_name)
@@ -92,12 +94,10 @@ void read_in (const char* file_name)
     char line [500];
     fgets(line, sizeof(line), f);
 
-    while(read_line(f, line, sizeof(line)))
+    while(read_line(f, line, sizeof(line)) != NULL)
     {
         change_commas(line, sizeof(line));
-        getchar();
         parse_line(line);
-        getchar();
     }
 
     fclose(f);

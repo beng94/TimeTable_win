@@ -62,4 +62,6 @@ typedef struct data
 } data;
 
 void init_data (data** data);
-void add_data (data* data, char* str, int arg_num);
+void add_data (data* data, char** tokens);
+char** get_tokens (const char* line, const char* separetor, int* count);
+
