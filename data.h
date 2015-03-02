@@ -1,3 +1,10 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
+#ifndef DATA_H
+#define DATA_H
+
 typedef enum curse_type
 {
     lecture,
@@ -46,7 +53,6 @@ typedef struct occassion
 
 } occassion;
 
-
 //TODO: lec_name -> curse_name
 typedef struct data
 {
@@ -61,7 +67,9 @@ typedef struct data
     struct data* next;
 } data;
 
-void init_data (data** data);
-void add_data (data* data, char** tokens);
+data* init_data ();
+void set_data (data* data, char** const tokens);
 char** get_tokens (const char* line, const char* separetor, int* count);
+void free_datas(data* data);
 
+#endif // DATA_H

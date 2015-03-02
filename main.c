@@ -1,9 +1,18 @@
-#include "IO.h"
+#include "io.h"
+#include "backtrack.h"
+
 const char *file_name = "TimeTable.csv";
 
 int main()
 {
-    read_in(file_name);
+    data* data_list = NULL;
+    read_in(&data_list, file_name);
+
+    getchar();
+    print_data_list(data_list);
+
+    decision* decision_list = NULL;
+    init_decisions(&decision_list, data_list);
 
     return 0;
 }

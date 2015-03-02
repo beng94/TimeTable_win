@@ -31,6 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="backtrack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="backtrack.h" />
 		<Unit filename="data.c">
 			<Option compilerVar="CC" />
 		</Unit>

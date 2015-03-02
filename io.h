@@ -1,5 +1,6 @@
-#include <stdio.h>
+#include "data.h"
 
-void read_in (const char* file_name);
+void read_in (data** root, const char* file_name);
+void print_data_list (data* root);
 
 

@@ -53,8 +53,8 @@ BMEVIMIAA00;Rendszermodellezés;4;1;;G14;Gyakorlat;33/0/35;;;"CS:10:15-12:00  (IB
 BMEVIMIAA00;Rendszermodellezés;4;1;;G18;Gyakorlat;0/0/35;;;"CS:10:15-12:00  (IB145);";Gönczy László;magyar;;;;;;;;;;;;;;
 BMEVIMIAA00;Rendszermodellezés;4;1;;G04;Gyakorlat;28/0/35;;;"P:10:15-12:00  (IB140);";Gönczy László;magyar;;;;;;;;;;;;;;
 BMEVIMIAA00;Rendszermodellezés;4;1;;G05;Gyakorlat;35/0/35;;;"P:10:15-12:00  (IB138);";Gönczy László;magyar;;;;;;;;;;;;;;
-BMEVIMIAA00;Rendszermodellezés;4;1;;GN;Gyakorlat;19/0/20;;;"P:10:15-12:00  (IB413);";;német;;;;;;;;;;;;;;
-BMEVIMIAA00;Rendszermodellezés;4;1;;EN;Elmélet;19/0/20;;;"SZE:10:15-12:00  (IB147);";;német;;;;;;;;;;;;;;
+BMEVIMIAA00;Rendszermodellezés;4;1;;GN;Gyakorlat;19/0/20;;;"P:10:15-12:00  (IB413);";Empty;német;;;;;;;;;;;;;;
+BMEVIMIAA00;Rendszermodellezés;4;1;;EN;Elmélet;19/0/20;;;"SZE:10:15-12:00  (IB147);";Empty;német;;;;;;;;;;;;;;
 BMEVIMIAA00;Rendszermodellezés;4;1;;G06;Gyakorlat;34/0/35;;;"P:10:15-12:00  (IE224);";Gönczy László;magyar;;;;;;;;;;;;;;
 BMEVIMIAA00;Rendszermodellezés;4;1;;GA;Gyakorlat;7/0/99;;;"P:12:15-14:00  (IB413);";Dr. Pataricza András;angol;;;;;;;;;;;;;;
 BMEVIMIAA00;Rendszermodellezés;4;1;;G03;Gyakorlat;33/0/35;;;"P:10:15-12:00  (IB139);";Gönczy László;magyar;;;;;;;;;;;;;;
@@ -94,7 +94,7 @@ BMEVISZAA01;Bevezetés a számításelméletbe 2;4;1;;E1;Gyakorlat;0/0/0;;;"K:08:15-1
 BMEVISZAA01;Bevezetés a számításelméletbe 2;4;1;;A1;Gyakorlat;8/0/10;;;"SZE:12:15-14:00  (IB144);";Dr. Csákány Rita;angol;;;;;;;;;;;;;;
 BMEVISZAA01;Bevezetés a számításelméletbe 2;4;1;;E2;Gyakorlat;0/0/0;;;"K:10:15-12:00  (TANSZEK);";Dr. Fleiner Tamás;magyar;;;;;;;;;;;;;;
 BMEVISZAA01;Bevezetés a számításelméletbe 2;4;1;;N1;Gyakorlat;19/0/30;;;"H:14:15-16:00  (IE219);";Gema Barnabás;német;;;;;;;;;;;;;;
-BMEVISZAA01;Bevezetés a számításelméletbe 2;4;1;;12;Gyakorlat;35/0/35;;;"K:10:15-12:00  (IB145);";;magyar;;;Gyakorlatv...;;;;;;;;;;;
+BMEVISZAA01;Bevezetés a számításelméletbe 2;4;1;;12;Gyakorlat;35/0/35;;;"K:10:15-12:00  (IB145);";Empty;magyar;;;Gyakorlatv...;;;;;;;;;;;
 BMEVISZAA01;Bevezetés a számításelméletbe 2;4;1;;13;Gyakorlat;35/0/35;;;"K:10:15-12:00  (IB146);";Szabó Réka Zsuzsanna;magyar;;;;;;;;;;;;;;
 BMEVISZAA01;Bevezetés a számításelméletbe 2;4;1;;14;Gyakorlat;17/0/17;;;"K:10:15-12:00  (IB147);";Titkos Tamás;magyar;;;Helyszín h...;;;;;;;;;;;
 BMEVISZAA01;Bevezetés a számításelméletbe 2;4;1;;15;Gyakorlat;36/0/36;;;"K:10:15-12:00  (QBF10);";Károlyi Márton Gyula;magyar;;;;;;;;;;;;;;
