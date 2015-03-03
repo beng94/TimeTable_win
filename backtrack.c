@@ -1,4 +1,5 @@
 #include "backtrack.h"
+#include "io.h"
 
 static int interval_collision (time* _time1, time* _time2)
 {
@@ -57,15 +58,36 @@ static int collision_detect(data* dt1, data* dt2)
     return 0;
 }
 
-static void collision_handle(decision* root, decision* dec)
+static void add_decision_backup (decision_backup** root, decision* dec)
+{
+    decision_backup* new_backup = (decision_backup*)malloc(sizeof(decision_backup));
+    new_backup->dec = dec;
+    new_backup->next = NULL;
+
+    if(*root == NULL)
+    {
+        *root = new_backup;
+    }
+    else
+    {
+        decision_backup* tmp = *root;
+        while(tmp != NULL) tmp = tmp->next;
+
+        tmp->next = new_backup;
+    }
+}
+
+static void collision_handle(decision* root, decision* dec, solution* sol)
 {
     decision* tmp = root;
     while(tmp != NULL)
     {
-        //TODO: what if it checks itself?
-        if(collision_detect(tmp->_data, dec->_data))
+        if(tmp->valid == 1 &&
+           collision_detect(tmp->_data, dec->_data) &&
+           tmp != dec)
         {
             tmp->valid = 0;
+            add_decision_backup(&(sol->dec_back), tmp);
         }
 
         tmp = tmp->next;
@@ -81,10 +103,7 @@ static void add_decision (decision** root, decision* new_dec)
     else
     {
         decision* tmp = *root;
-        while(tmp->next != NULL)
-        {
-            tmp = tmp->next;
-        }
+        while(tmp->next != NULL) tmp = tmp->next;
 
         tmp->next = new_dec;
     }
@@ -102,5 +121,98 @@ void init_decisions(decision** root, data* data_root)
 
         add_decision(root, new_dec);
         tmp = tmp->next;
+    }
+}
+
+void print_decisions (decision* root)
+{
+    decision* tmp = root;
+    while(tmp != NULL)
+    {
+        printf("Valid: %d\n", tmp->valid);
+        print_data(tmp->_data);
+
+        tmp = tmp->next;
+    }
+}
+
+//TODO: maybe redundant with pick_decision
+static int decision_empty (decision* root)
+{
+    decision* tmp = root;
+    while(tmp != NULL)
+    {
+        if(tmp->valid == 1) return 1;
+
+        tmp = tmp->next;
+    }
+
+    return 0;
+}
+
+//TODO: should it return data instead of decision
+static decision* pick_decision (decision* root)
+{
+    decision* tmp = root;
+    while(tmp != NULL)
+    {
+        if(tmp->valid == 1) return tmp;
+
+        tmp = tmp->next;
+    }
+
+    return NULL; //wont be needed if decision_empty checked
+}
+
+
+static int solution_found () {}
+
+static void add_decision_to_solution(solution** root, solution* sol)
+{
+    if(*root == NULL)
+    {
+        *root = sol;
+    }
+    else
+    {
+        solution* tmp = *root;
+        while(tmp->next != NULL) tmp = tmp->next;
+
+        tmp = sol;
+    }
+}
+
+static solution* set_solution (decision* dec)
+{
+    solution* new_sol = (solution*)malloc(sizeof(solution));
+    new_sol->dec = dec;
+    new_sol->dec_back = NULL;
+    new_sol->next = NULL;
+
+    return new_sol;
+}
+
+void back_track (decision* decision_list)
+{
+    solution* sol = NULL;
+
+    while(decision_empty(decision_list))
+    {
+        decision* pick = pick_decision(decision_list);
+        solution* new_sol = set_solution(pick);
+        collision_handle(decision_list, pick, new_sol); //TODO: should store the invalidated data for the step_back
+        add_decision_to_solution(&sol, new_sol);
+
+        if(decision_empty(decision_list))
+        {
+            if(solution_found())
+            {
+                //TODO: save solution
+            }
+            else
+            {
+                //TODO: step_back
+            }
+        }
     }
 }

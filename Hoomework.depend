@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1425308898 source:c:\users\bence_000\desktop\hoomework\main.c
+1425375277 source:c:\users\bence_000\desktop\hoomework\main.c
 	"io.h"
 	"backtrack.h"
 
-1424984076 source:c:\users\bence_000\desktop\hoomework\io.c
+1425375347 source:c:\users\bence_000\desktop\hoomework\io.c
 	<windows.h>
 	"io.h"
 
-1424983087 c:\users\bence_000\desktop\hoomework\io.h
+1425375327 c:\users\bence_000\desktop\hoomework\io.h
 	"data.h"
 
 1424984086 source:c:\users\bence_000\desktop\hoomework\data.c
@@ -18,9 +18,10 @@
 	<string.h>
 	<stdio.h>
 
-1425309041 source:c:\users\bence_000\desktop\hoomework\backtrack.c
+1425387153 source:c:\users\bence_000\desktop\hoomework\backtrack.c
 	"backtrack.h"
+	"io.h"
 
-1425310225 c:\users\bence_000\desktop\hoomework\backtrack.h
+1425386863 c:\users\bence_000\desktop\hoomework\backtrack.h
 	"data.h"
 

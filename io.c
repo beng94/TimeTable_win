@@ -47,7 +47,7 @@ static char* read_line (FILE* f, char* line, size_t size)
     return (char*) fgets(line, size, f);
 }
 
-static void print(const data* data)
+void print_data(const data* data)
 {
     printf("%s\n", data->lec_code);
     printf("%s\n", data->lec_name);
@@ -99,7 +99,7 @@ void print_data_list (data* root)
     data* tmp = root;
     while(tmp != NULL)
     {
-        print(tmp);
+        print_data(tmp);
         tmp = tmp->next;
     }
 }

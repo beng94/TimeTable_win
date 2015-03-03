@@ -13,6 +13,7 @@ int main()
 
     decision* decision_list = NULL;
     init_decisions(&decision_list, data_list);
+    print_decisions(decision_list);
 
     return 0;
 }
