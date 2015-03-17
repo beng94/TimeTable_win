@@ -7,16 +7,16 @@ typedef struct decision
     struct decision* next;
 } decision;
 
-typedef struct decision_backup
+typedef struct collisions
 {
     decision* dec;
-    struct decision_backup* next;
-} decision_backup;
+    struct collisions* next;
+} collisions;
 
 typedef struct solution
 {
     decision* dec;
-    decision_backup* dec_back;
+    collisions* col;
     struct solution* next;
 } solution;
 

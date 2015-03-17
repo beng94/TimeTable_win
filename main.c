@@ -15,5 +15,7 @@ int main()
     init_decisions(&decision_list, data_list);
     print_decisions(decision_list);
 
+    back_track(decision_list);
+
     return 0;
 }
